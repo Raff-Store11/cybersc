@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>penjelasan cyber security - browser view</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#ffffff;--muted:#6b7280;--accent:#0ea5a4;--glass:rgba(255,255,255,0.6)}
+    *{box-sizing:border-box;font-family:inter, ui-sans-serif, system-ui, -apple-system, 'segoe ui', roboto, 'helvetica neue', arial, sans-serif}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#eef2ff 0%,var(--bg) 100%);color:#111827;font-size:16px}/* top bar like browser */
+.browser{max-width:980px;margin:32px auto;border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.08);overflow:hidden;background:var(--card)}
+.topbar{display:flex;align-items:center;gap:12px;padding:10px 14px;background:linear-gradient(90deg,rgba(0,0,0,0.02),transparent)}
+.circles{display:flex;gap:8px}
+.dot{width:12px;height:12px;border-radius:999px}
+.dot.red{background:#ef4444}.dot.yellow{background:#f59e0b}.dot.green{background:#10b981}
+.address{flex:1;background:var(--glass);padding:8px 12px;border-radius:8px;font-size:14px;color:var(--muted);display:flex;align-items:center;gap:8px}
+.address input{border:0;background:transparent;outline:none;width:100%;font-size:14px;color:inherit}
+.content{display:grid;grid-template-columns:320px 1fr;gap:18px;padding:18px}
+
+/* sidebar */
+.sidebar{padding:8px;position:sticky;top:22px;height:calc(100vh - 160px);overflow:auto}
+.card{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 2px 8px rgba(16,24,40,0.04);margin-bottom:12px}
+.logo{display:flex;gap:10px;align-items:center}
+.logo img{width:44px;height:44px;border-radius:8px;object-fit:cover}
+.menu a{display:block;padding:10px;border-radius:8px;color:#0f172a;text-decoration:none;margin:6px 0;font-weight:600}
+.menu a:hover{background:#eef2ff}
+
+/* main area */
+main{padding:8px 12px}
+.hero{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.hero img{width:120px;height:80px;border-radius:8px;object-fit:cover}
+h1{font-size:20px;margin:0}
+p.lead{margin:6px 0;color:var(--muted)}
+
+section{margin-bottom:18px}
+.section-img{width:100%;height:160px;border-radius:8px;object-fit:cover;margin-top:10px}
+.defs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.badge{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef2ff;font-weight:600;margin-right:6px}
+
+pre{background:#0b1220;color:#e6eef8;padding:12px;border-radius:8px;overflow:auto;font-size:13px}
+
+/* practice box */
+.practice{display:grid;grid-template-columns:1fr;gap:10px}
+.exercise{padding:12px;border-radius:10px;border:1px solid #eef2ff}
+
+/* footer */
+.footer{padding:12px;color:var(--muted);font-size:14px}
+
+/* smooth scroll animation */
+html{scroll-behavior:smooth}
+.fade-up{opacity:0;transform:translatey(8px);transition:all .45s ease}
+.fade-up.in{opacity:1;transform:none}
+
+/* responsive */
+@media(max-width:880px){.content{grid-template-columns:1fr}.sidebar{display:none}}
+
+@keyframes marquee{0%{transform:translateX(0%)}100%{transform:translateX(-100%)}}</style>
+
+</head>
+<body>
+  <div class="browser" role="application" aria-label="browser-styled cyber security guide">
+    <div class="topbar">
+      <div class="circles" aria-hidden>
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+      </div>
+      <div class="address" role="search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="m21 21-4.35-4.35" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div style="overflow:hidden;white-space:nowrap;flex:1"><div style="display:inline-block;padding-left:100%;animation:marquee 12s linear infinite">penjelasan: cyber security | jenis hacker | praktek aman</div></div>
+      </div>
+      <div style="font-size:13px;color:var(--muted)">SXYZ RAFF V2</div>
+    </div><div class="content">
+  <aside class="sidebar">
+    <div class="card logo">
+      <img src="fans.jpg" alt="avatar">
+      <div>
+        <div style="font-weight:700">cyber security 101</div>
+        <div style="font-size:13px;color:var(--muted)">panduan ringkas dan praktis</div>
+      </div>
+    </div>
+
+    <nav class="card menu" aria-label="navigasi cepat">
+      <a href="#intro">pengantar</a>
+      <a href="#jenis-hacker">jenis hacker</a>
+      <a href="#konsep-inti">konsep inti</a>
+      <a href="#alat-dan-praktik">alat & praktik aman</a>
+      <a href="#exercise">praktik interaktif</a>
+      <a href="#saran">saran belajar</a>
+    </nav>
+
+    <div class="card">
+      <div style="font-weight:700;margin-bottom:6px">ringkasan cepat</div>
+      <div style="color:var(--muted)">cyber security = perlindungan sistem, data, jaringan. fokus di pencegahan, deteksi, dan pemulihan dari ancaman.</div>
+    </div>
+  </aside>
+
+  <main>
+    <header class="card hero fade-up" id="intro">
+      <img src="fans.jpg" alt="hero" loading="lazy">
+      <div>
+        <h1>pengantar singkat cyber security</h1>
+        <p class="lead">cyber security itu tentang menjaga kerahasiaan, integritas, dan ketersediaan data. di sini kita pelajari prinsip, jenis hacker, alat defensif, dan praktik aman yang bisa langsung dicoba (yang aman dan edukatif).</p>
+        <div style="margin-top:8px"><span class="badge">level : menengah</span><span class="badge">format: edukasi</span></div>
+      </div>
+    </header>
+
+    <section class="card fade-up" id="jenis-hacker">
+      <h2>kenali jenis-jenis hacker</h2>
+      <img class="section-img" src="Screenshot_2025-10-21-09-54-18-16_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="jenis hacker" loading="lazy">
+      <div style="margin-top:10px;line-height:1.6;color:var(--muted)">
+        <p><strong>white hat</strong> - hacker etis yang bantu organisasi temukan kelemahan dan perbaiki bekerja dengan izin.</p>
+        <p><strong>grey hat</strong> - di antara baik dan jahat; kadang temukan bug tanpa izin dan beri tahu owner, tapi cara dan niatnya.</p>
+        <p><strong>black hat</strong> - pelaku jahat yang eksploitasi kelemahan untuk keuntungan, pencurian, atau merusak. tindakan ilegal dan berbahaya.</p>
+        <p><strong>blue team</strong> - tim defensif yang menjaga, memantau, dan merespon. fokus pada pertahanan.</p>
+        <p><strong>red team</strong> - tim yang mensimulasikan serangan secara terkontrol untuk menguji pertahanan (dengan izin).</p>
+      </div>
+    </section>
+
+    <section class="card fade-up" id="konsep-inti">
+      <h2>konsep inti yang harus dikuasai</h2>
+      <div class="defs" style="margin-top:10px">
+        <div>
+          <h3>confidentiality</h3>
+          <p style="color:var(--muted)">menjaga agar data hanya bisa diakses pihak yang berhak (mis. enkripsi, akses kontrol).</p>
+        </div>
+        <div>
+          <h3>integrity</h3>
+          <p style="color:var(--muted)">menjamin data tidak berubah tanpa izin (mis. hashing, checksum).</p>
+        </div>
+        <div>
+          <h3>availability</h3>
+          <p style="color:var(--muted)">layanan dan data harus tersedia saat dibutuhkan (mis. backup, mitigasi ddos).</p>
+        </div>
+        <div>
+          <h3>least privilege</h3>
+          <p style="color:var(--muted)">beri hak minimal yang diperlukan pada user atau proses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card fade-up" id="alat-dan-praktik">
+      <h2>alat yang sering dipakai (defensif & edukatif)</h2>
+      <ul style="color:var(--muted);line-height:1.6">
+        <li><strong>wireshark</strong> - untuk inspeksi paket jaringan (belajar cara kerja protokol, tidak untuk menyadap data orang tanpa izin).</li>
+        <li><strong>burp suite (community)</strong> - untuk menginspeksi dan menguji keamanan aplikasi web secara etis.</li>
+        <li><strong>nmap</strong> - pemindaian jaringan; gunakan untuk audit jaringan yang kamu miliki atau dengan izin.</li>
+        <li><strong>metasploit</strong> - alat untuk riset, jangan digunakan untuk penyalahgunaan; pelajari di lab terisolasi.</li>
+      </ul>
+      <p style="margin-top:8px;color:var(--muted)">catatan: semua alat di atas harus dipakai secara etis dan legal. jangan lakukan tindakan yang melanggar hukum atau privasi orang lain.</p>
+    </section>
+
+    <section class="card fade-up" id="exercise">
+      <h2>praktik interaktif (aman & edukatif)</h2>
+      <p style="color:var(--muted)">di bawah ini ada beberapa latihan yang bisa dijalankan langsung di browser untuk memahami konsep dasar tanpa merusak siapa pun.</p>
+
+      <div class="practice" style="margin-top:10px">
+
+        <div class="exercise">
+          <strong>1. cek kekuatan password</strong>
+          <p style="color:var(--muted)">masukkan kata sandi, lihat skor, dan tips perbaikan.</p>
+          <input id="pwd" placeholder="masukkan password" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e6eef8">
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center"><button id="checkpwd" style="padding:8px 12px;border-radius:8px;border:0;background:#0ea5a4;color:white;cursor:pointer">cek</button><div id="pwresult" style="font-weight:700;color:var(--muted)"></div></div>
+        </div>
+
+        <div class="exercise">
+          <strong>2.  hashing (one-way)</strong>
+          <p style="color:var(--muted)">masukkan teks, lihat hasil hash sha-256 — contoh mengapa password disimpan dalam bentuk hash.</p>
+          <input id="text" placeholder="masukkan teks" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e6eef8">
+          <div style="margin-top:8px;display:flex;gap:8px"><button id="hashbtn" style="padding:8px 12px;border-radius:8px;border:0;background:#0ea5a4;color:white;cursor:pointer">hash</button><div id="hashout" style="word-break:break-all;color:var(--muted);font-size:13px"></div></div>
+        </div>
+
+        <div class="exercise">
+          <strong>3. sanitasi input (xss safe)</strong>
+          <p style="color:var(--muted)">coba masukkan teks berbahaya, lihat perbedaan antara output mentah (berbahaya) dan output yang sudah disanitasi (aman).</p>
+          <input id="xssinput" placeholder="masukkan teks (contoh: &lt;script&gt;alert('xss')&lt;/script&gt;)" style="width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #e6eef8">
+          <div style="margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <div style="padding:8px;border-radius:8px;background:#fff;border:1px solid #f8eaea">
+              <div style="font-weight:700;margin-bottom:6px">output mentah (tidak aman)</div>
+              <div id="rawout" style="min-height:40px;color:#b91c1c;font-size:13px"></div>
+            </div>
+            <div style="padding:8px;border-radius:8px;background:#fff;border:1px solid #e6f4f4">
+              <div style="font-weight:700;margin-bottom:6px">output disanitasi (aman)</div>
+              <div id="safeout" style="min-height:40px;color:var(--muted);font-size:13px"></div>
+            </div>
+          </div>
+          <div style="margin-top:8px"><button id="xssbtn" style="padding:8px 12px;border-radius:8px;border:0;background:#0ea5a4;color:white;cursor:pointer">tampilkan</button></div>
+        </div>
+
+        <div class="exercise">
+          <strong>4. baca header</strong>
+          <p style="color:var(--muted)">contoh bagaimana server menerima header. ini hanya edukasi, tidak mengambil data sungguhan.</p>
+          <button id="hdrbtn" style="padding:8px 12px;border-radius:8px;border:0;background:#0ea5a4;color:white;cursor:pointer">tampilkan header edukasi</button>
+          <pre id="hdrout">// header server akan muncul di sini</pre>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card fade-up" id="saran">
+      <h2>saran belajar & langkah selanjutnya</h2>
+      <ol style="color:var(--muted);line-height:1.6">
+        <li>mulai dengan dasar: jaringan, tcp/ip, http, dan keamanan aplikasi web.</li>
+        <li>praktik di lingkungan terisolasi: gunakan vm atau lab seperti <em>owasp juice shop</em> atau lab vulnhub.</li>
+        <li>baca sumber terpercaya: owasp, mitre att&ck, dan dokumentasi resmi alat.</li>
+        <li>ikuti course etis dan dapatkan sertifikat jika perlu (contoh: oscp, cebp, atau yang relevan).</li>
+        <li>praktikkan etika: minta izin, laporkan temuan, dan bantu perbaiki.</li>
+      </ol>
+    </section>
+
+    <div class="footer">©SXYZ RAFF V2 • EDUKASI INTERAKTIF CYBER SECURITY</div>
+  </main>
+</div>
+
+  </div>  <script>
+    // simple fade-in observer
+    document.addEventListener('DOMContentLoaded',()=>{
+      const els=document.querySelectorAll('.fade-up');
+      const io=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})
+      },{threshold:0.12});
+      els.forEach(el=>io.observe(el));
+
+      // password checker (very simple)
+      const pwd=document.getElementById('pwd');
+      const checkpwd=document.getElementById('checkpwd');
+      const pwresult=document.getElementById('pwresult');
+      checkpwd.addEventListener('click',()=>{
+        const v=pwd.value||'';
+        let score=0;
+        if(v.length>=8)score+=1; if(/[a-z]/.test(v))score+=1; if(/[A-Z]/.test(v))score+=1; if(/[0-9]/.test(v))score+=1; if(/[^a-zA-Z0-9]/.test(v))score+=1;
+        const labels=['very weak','weak','ok','good','strong','very strong'];
+        pwresult.textContent=labels[score];
+      });
+
+      // hashing demo using web crypto
+      const text=document.getElementById('text');
+      const hashbtn=document.getElementById('hashbtn');
+      const hashout=document.getElementById('hashout');
+      async function sha256(str){
+        const buf=new TextEncoder().encode(str);
+        const digest=await crypto.subtle.digest('SHA-256',buf);
+        return Array.from(new Uint8Array(digest)).map(b=>b.toString(16).padStart(2,'0')).join('');
+      }
+      hashbtn.addEventListener('click',async()=>{hashout.textContent='loading...';hashout.textContent=await sha256(text.value||'');});
+
+      // xss sanitization demo
+      const xssbtn=document.getElementById('xssbtn');
+      const rawout=document.getElementById('rawout');
+      const safeout=document.getElementById('safeout');
+      const xssinput=document.getElementById('xssinput');
+      function escapeHtml(str){return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');}
+      xssbtn.addEventListener('click',()=>{
+        const v=xssinput.value||'';
+        rawout.textContent=v;
+        safeout.textContent=escapeHtml(v);
+      });
+
+      // header simulation
+      const hdrbtn=document.getElementById('hdrbtn');
+      const hdrout=document.getElementById('hdrout');
+      hdrbtn.addEventListener('click',()=>{
+        const sim={
+          'host':'example.local',
+          'user-agent':'sxyz-raff-browser/1.0',
+          'accept':'text/coding',
+          'x-forwarded-for':'127.0.0.1'
+        };
+        hdrout.textContent=JSON.stringify(sim,null,2);
+      });
+
+    });
+  </script></body>
+</html>
